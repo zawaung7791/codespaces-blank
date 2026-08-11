@@ -12,7 +12,7 @@ git commit -m "sarcasm detector setup"
 gh repo create sarcasm-detector --private --source=. --push
 ```
 
-## 2. Launch a Codespace (16-core, 64GB)
+## 2. Launch a Codespace (4-core, 16GB)
 
 Via the GitHub web UI:
 - Go to your repo -> Code -> Codespaces -> "..." -> New with options
@@ -27,7 +27,7 @@ gh codespace create --repo YOUR_USERNAME/sarcasm-detector --machine largePremium
 `--machine` first to see the exact machine-type names available to your
 account/org — they vary by plan.)
 
-The `.devcontainer/devcontainer.json` requests 16 cores / 64GB and
+The `.devcontainer/devcontainer.json` requests 4 cores / 16GB and
 auto-installs everything in `requirements.txt` on creation.
 
 Note: this machine size is CPU-only. Fine-tuning a transformer on CPU works

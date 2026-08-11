@@ -1,0 +1,14 @@
+{
+  "name": "sarcasm-detector",
+  "image": "mcr.microsoft.com/devcontainers/python:3.14",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install uv && uv venv .venv --clear && uv pip install --python .venv/bin/python -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
+    }
+  }
+}
